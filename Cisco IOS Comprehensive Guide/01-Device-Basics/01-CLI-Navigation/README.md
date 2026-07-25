@@ -1,4 +1,6 @@
+<div align="center">
 # Cisco IOS CLI Navigation
+</div>
 
 ## Overview
 If you are new to Cisco networking or are migrating from other vendor equipment (like Juniper or standard Linux servers), the **Cisco Internetwork Operating System (IOS)** might feel a bit unusual at first. Cisco IOS is a proprietary, text-based operating system used to configure, monitor, and maintain Cisco routers and switches. Unlike standard operating systems where you can type any command from a single prompt, Cisco IOS uses a strict hierarchical mode structure. The commands you are allowed to execute depend entirely on which "mode" you are currently in. This structure acts as a built-in security and safety mechanism.
