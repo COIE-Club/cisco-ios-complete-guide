@@ -20,9 +20,9 @@ In an enterprise network containing dozens or hundreds of devices, leaving the d
 </div>
 
 ## Requirements
-* 1x Cisco IOS Router (e.g., ISR4331)
+* 1x Cisco IOS Router ISR4331
 * Console or CLI access
-* App used: Cisco Packet Tracer (or any standard emulator like GNS3/EVE-NG)
+* App used: Cisco Packet Tracer
 
 ## Configuration
 
