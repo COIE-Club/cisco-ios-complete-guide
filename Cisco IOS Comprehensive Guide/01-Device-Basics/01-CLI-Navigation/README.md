@@ -137,5 +137,4 @@ Working fast in the CLI means rarely typing full words and keeping your hands on
 
 ## References
 * [Cisco IOS Configuration Fundamentals Command Reference](https://www.cisco.com/c/en/us/td/docs/ios/fundamentals/command/reference/cf_book.html)
-* [Cisco IOS XE - Using the Cisco IOS Command-Line Interface](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fundamentals/configuration/15mt/fundamental-15-mt-book/cf-cli-basics.html)
-* [Download PuTTY - Free SSH and Telnet Client](https://www.putty.org/)
+* [Download PuTTY - Free SSH and Telnet Client]([https://www.putty.org/](https://putty.org/index.html))
