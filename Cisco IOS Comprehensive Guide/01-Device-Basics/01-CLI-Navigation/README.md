@@ -15,6 +15,7 @@ In the real world, you cannot just click a "CLI" tab like you do in an emulator.
 <div align="center">
 
 ![Topology Diagram](./topology.png)
+
 *(Note: A single ISR4331 router and a Laptop connected via a console cable in Cisco Packet Tracer are used to explore the command hierarchy and terminal settings.)*
 
 </div>
