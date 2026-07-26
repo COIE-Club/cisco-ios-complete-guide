@@ -103,5 +103,34 @@ This command displays the currently active sessions. You can verify that you are
   ```
   Give junior engineers or helpdesk staff Privilege Level 1. Reserve Privilege Level 15 strictly for senior network engineers making topology-changing modifications.
 
+## Customize Privilege Level
+By default, Cisco IOS operates on two main privilege levels: Level 1 (User EXEC, extremely limited) and Level 15 (Privileged EXEC, full admin). However, organizations often require Role-Based Access Control (RBAC)—such as giving a NOC technician access to `ping` and `show ip route`, but nothing else. You can achieve this by assigning custom privilege levels (2 through 14).
+
+### Custom Privilege Configuration
+```text
+! 1. Define custom commands for a new custom Privilege Level (e.g., Level 5)
+privilege exec level 5 ping
+privilege exec level 5 traceroute
+privilege exec level 5 show ip interface brief
+privilege exec level 5 show ip route
+
+! 2. Create a user account tied to the custom Privilege Level 5
+username noc_tech privilege 5 secret NocPass123!
+```
+
+### Explanation & Caveats
+* `privilege exec level 5 [command]` - Extracts a specific command from the default Level 15 or Level 1 buckets and explicitly authorizes it for Level 5. 
+* When `noc_tech` logs in, they will bypass the `Router>` prompt and land directly at a `Router#` prompt. However, they will **only** be able to run the commands explicitly assigned to Level 5, plus any default Level 1 commands.
+* **The Sub-command Caveat:** Privilege levels are extremely literal. If you grant a custom level access to `configure terminal` (e.g., `privilege exec level 5 configure terminal`), the user can enter global configuration mode, but they won't be able to actually change anything unless you also explicitly authorize the configuration sub-commands (like `privilege configure level 5 interface`).
+
+### Verification
+To verify this configuration, log in as your newly created custom user and issue the following command:
+
+```text
+Router# show privilege
+```
+You should see output stating `Current privilege level is 5`. 
+*(Note: If a custom user receives a "% Invalid input detected" error for a command you thought you authorized, ensure you didn't miss a keyword in the `privilege` configuration. For example, authorizing `show ip` does not automatically authorize `show ip route`; you must be explicit.)*
+
 ## References
 * [Cisco IOS Security Command Reference: username](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/security/s1/sec-s1-cr-book/sec-cr-t2.html#wp4102283080)
