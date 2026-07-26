@@ -31,13 +31,11 @@ To maintain organization, folders should be numbered exactly as shown below so t
 * `01-CLI-Navigation`
 * `02-Hostname`
 * `03-User-Accounts-and-Passwords`
-* `04-Enable-Secret`
-* `05-Console-Access`
-* `06-VTY-Telnet-SSH`
-* `07-Banner-MOTD`
-* `08-Saving-and-Backing-Up`
-* `09-Basic-Show-Commands`
-* `10-Password-Recovery`
+* `04-VTY-Telnet-SSH`
+* `05-Banner-MOTD`
+* `06-Saving-and-Backing-Up`
+* `07-Basic-Show-Commands`
+* `08-Password-Recovery`
 
 ### `02-Interface-Configuration/`
 * `01-Ethernet-Interfaces`
