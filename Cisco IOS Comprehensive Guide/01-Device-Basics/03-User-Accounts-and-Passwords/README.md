@@ -16,14 +16,14 @@ While large enterprises ultimately scale their security using centralized authen
 
 <div align="center">
 
-![Topology Diagram](./topology.png)
+![Topology Diagram](topology.png)
 
 *(Note: The lab environment consists of a single, standalone Cisco ISR4331 Router. No additional network connections are required to configure and test local user databases.)*
 
 </div>
 
 ## Requirements
-* **Lab Application:** Cisco Packet Tracer (or EVE-NG / GNS3)
+* **Lab Application:** Cisco Packet Tracer
 * **Devices:** One Cisco IOS router (ISR4331)
 * **Connectivity:** Basic terminal/console access to the CLI
 
@@ -52,6 +52,9 @@ line con 0
 line vty 0 4
  login local
  exit
+
+! 6. Save the current active settings to permanent storage
+do wr
 ```
 
 ## Configuration Explanation
@@ -61,25 +64,36 @@ line vty 0 4
 * `line con 0` - Enters the configuration mode for the physical console port (used when connected via a console cable).
 * `line vty 0 4` - Enters the configuration mode for the first five virtual terminal lines, which handle remote access protocols like SSH and Telnet.
 * `login local` - Instructs the router to check the local username database for credentials when someone attempts to log in, overriding the default behavior of asking for a simple, shared line password.
+* `do wr` - Short for `write memory`. This is a legacy shortcut used by almost all network engineers in production to quickly save the running configuration to the startup configuration (NVRAM) without having to exit to Privileged EXEC mode.
 
 ## Verification
 
+**1. Verify the hashed passwords in the configuration:**
 ```text
 Router# show running-config | include username
 ```
 Look for the username entries. You should see a number (like `5`, `8`, or `9`) after the word `secret` followed by a random string of characters. This confirms your passwords are securely hashed (e.g., `username netadmin privilege 15 secret 5 $1$mERr$abc123XYZ...`).
+
+**2. Test your new login credentials:**
+* Type `exit` to log out of your current console session.
+* Press **Enter** to wake the console back up. The router should immediately prompt you for a `Username:`.
+* Log in using the `netadmin` username and password. 
+* Once logged in successfully, verify your active user:
 
 ```text
 Router# show users
 ```
 This command displays the currently active sessions. You can verify that you are logged in using the specific username you just created under the "User" column.
 
+*(Enterprise Warning: Because this is a lab, typing `exit` to test your login is perfectly safe. However, in a real production environment, **never** log out of your only active session to test a new password! Always open a second SSH session to test so you don't accidentally lock yourself out if you made a typo.)*
+
 ## Common Mistakes
 * **Using `password` instead of `secret`:** If you type `username admin password cisco`, the password is saved in cleartext. Even if you use `service password-encryption`, it only applies trivial Type 7 encryption, which can be instantly decrypted using free online tools. Always use the `secret` keyword.
 * **Locking yourself out:** If you configure `login local` on `line con 0` or `line vty 0 4` *before* you actually create a local username, the router will immediately start prompting for credentials you haven't created yet, completely locking you out of the device upon your next login.
+* **Testing accounts with a reload:** Never use the `reload` command just to test if a user account works. Reloading causes network downtime and risks a total lockout if you made a typo in your password.
 
 ## Troubleshooting
-1. **Test before you disconnect:** Whenever you configure authentication, open a *second* SSH session or console tab to test your new credentials while leaving your original administrative session active. If the new credentials fail, you can fix the issue using the original, still-active session.
+1. **Command rejected for custom users:** If a custom user receives a "% Invalid input detected" error for a command you thought you authorized, ensure you didn't miss a keyword in the `privilege` command. For example, authorizing `show ip` does not automatically authorize `show ip route`; you must be specific.
 2. **Check line configurations:** If the router is not prompting for a username and only asks for a password, verify that `login local` is explicitly applied to the specific line by running `show run | section line`. If it simply says `login`, it is looking for a line password, not a local database user.
 
 ## Best Practices
@@ -124,7 +138,7 @@ username noc_tech privilege 5 secret NocPass123!
 * **The Sub-command Caveat:** Privilege levels are extremely literal. If you grant a custom level access to `configure terminal` (e.g., `privilege exec level 5 configure terminal`), the user can enter global configuration mode, but they won't be able to actually change anything unless you also explicitly authorize the configuration sub-commands (like `privilege configure level 5 interface`).
 
 ### Verification
-To verify this configuration, log in as your newly created custom user and issue the following command:
+To verify this configuration, log out of the console using `exit`, log back in as your newly created custom user, and issue the following command:
 
 ```text
 Router# show privilege
