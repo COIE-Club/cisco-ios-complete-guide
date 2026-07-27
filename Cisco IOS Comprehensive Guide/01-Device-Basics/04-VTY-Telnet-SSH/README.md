@@ -157,5 +157,5 @@ R2# show users
     *   [RFC 4251: The Secure Shell (SSH) Protocol Architecture](https://datatracker.ietf.org/doc/html/rfc4251)
     *   [RFC 854: Telnet Protocol Specification](https://datatracker.ietf.org/doc/html/rfc854)
 *   **Cryptography & Domain Names:**
-    *   [Cloudflare: What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/))
-    *   [Wikipedia: RSA cryptosystem](https://en.wikipedia.org/wiki/RSA_cryptosystem))
+    *   [Cloudflare: What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/)
+    *   [Wikipedia: RSA cryptosystem](https://en.wikipedia.org/wiki/RSA_cryptosystem)
