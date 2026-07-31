@@ -1,6 +1,7 @@
 <div align = "center">
 
-# 05-Banner-MOTD
+# 01-Device-Basics
+# Banner MOTD
 
 </div>
 
