@@ -1,7 +1,6 @@
 <div align = "center">
 
-# 01-Device-Basics
-Banner MOTD
+# Cisco IOS Banner MOTD
 
 </div>
 
