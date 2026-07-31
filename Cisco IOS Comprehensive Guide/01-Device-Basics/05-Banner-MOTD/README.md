@@ -15,6 +15,7 @@ In enterprise environments, banners are critical for legal protection and compli
 <div align = "center">
 
 ![Topology Diagram](./topology.png)
+
 *(Note: The lab topology consists of a single management PC directly connected to the console port of Cisco IOS Router R1.)*
 
 </div>
