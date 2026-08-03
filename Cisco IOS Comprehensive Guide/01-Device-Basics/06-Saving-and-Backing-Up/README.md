@@ -15,10 +15,6 @@ In a production enterprise environment, forgetting to save your configuration is
 
 ![Topology Diagram](./topology.png)
 
-```text
-  [ R1 ] (Gi0/0) --------------------- (Eth0) [ TFTP Server ]
- 192.168.1.1                                  192.168.1.100
-```
 **Topology Description:** A single Cisco IOS Router (R1) connected directly via GigabitEthernet0/0 to an external TFTP Server. Basic IP connectivity is already established between the two devices.
 
 </div>
