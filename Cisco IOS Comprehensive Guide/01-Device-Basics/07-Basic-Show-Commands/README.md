@@ -146,6 +146,3 @@ If you are struggling to navigate the CLI efficiently, you are likely missing th
 
 ## References
 * Cisco IOS Configuration Fundamentals Command Reference: [Cisco Official Documentation](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-releases-15-2-m-t/series.html)
-
-[https://github.com/COIE-Club/cisco-ios-comprehensive-guide](https://github.com/COIE-Club/cisco-ios-comprehensive-guide)
-[https://github.com/COIE-Club/cisco-ios-comprehensive-guide/issues/6](https://github.com/COIE-Club/cisco-ios-comprehensive-guide/issues/6)
