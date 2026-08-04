@@ -145,4 +145,4 @@ If you are struggling to navigate the CLI efficiently, you are likely missing th
 * **Use Command Abbreviations:** IOS accepts unique abbreviations. `sh ip int br` is the standard, globally recognized enterprise shorthand for `show ip interface brief`.
 
 ## References
-* Cisco IOS Configuration Fundamentals Command Reference: [Cisco Official Documentation](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-releases-15-2-m-t/series.html)
+* Cisco IOS Configuration Fundamentals Command Reference: [Cisco Official Documentation](https://www.cisco.com/c/en/us/td/docs/server_nw_virtual/2-5_release/command_reference/show.html)
