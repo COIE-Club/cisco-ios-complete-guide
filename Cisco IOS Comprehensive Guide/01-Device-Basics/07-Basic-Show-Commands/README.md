@@ -16,7 +16,7 @@ In a real-world enterprise environment, network engineers spend roughly 10% of t
 ![Topology Diagram](./topology.png)
 
 > [**Topology Description:**]
-> This logical setup features a classic "Router-on-a-Stick" enterprise architecture. A Cisco ISR4331 Router connects to a centralized switch via an 802.1Q trunk. The switch segregates traffic into four distinct VLANs: IT (VLAN 10), HR (VLAN 20), SALES (VLAN > 30), ?and MGMT (VLAN 100) with their respective subnets. 
+> This logical setup features a classic "Router-on-a-Stick" enterprise architecture. A Cisco ISR4331 Router connects to a centralized switch via an 802.1Q trunk. The switch segregates traffic into four distinct VLANs: IT (VLAN 10), HR (VLAN 20), SALES (VLAN 30), and MGMT (VLAN 100) with their respective subnets. 
 
 </div>
 
