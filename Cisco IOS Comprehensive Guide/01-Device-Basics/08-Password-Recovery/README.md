@@ -28,8 +28,11 @@ In a real-world enterprise environment, network engineers frequently inherit und
 **Packet Tracer Lab Note for Accessing ROMMON:**
 Sometimes Cisco Packet Tracer does not save the ROMMON state correctly as the default when starting a lab. If your switch boots normally, you will need to manually interrupt the boot process:
 1. Click the **Power Cycle Devices** button on the bottom toolbar.
+
    ![Power Cycle](./power_cycle_1.png)
+   
 2. Quickly click on the switch (SW1), navigate to the **Physical** tab, and hold down the blue **Mode** button until the prompt tells you it has been pressed long enough to enter ROMMON.
+
    ![Switch Mode Button](./switch_mode_button_2.png)
 
 ## Configuration
