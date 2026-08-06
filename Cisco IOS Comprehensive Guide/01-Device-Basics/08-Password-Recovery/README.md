@@ -1,6 +1,6 @@
 <div align = "center">
 
-# 08 Password Recovery
+# Cisco IOS Password Recovery
 
 </div>
 
