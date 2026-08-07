@@ -1,5 +1,7 @@
 <div align="center">
+  
   <h1>Cisco IOS Ethernet Interfaces</h1>
+  
 </div>
 
 ## Overview
@@ -10,8 +12,11 @@ In a production enterprise environment, a router cannot route traffic, form dyna
 
 ## Topology
 <div align="center">
+  
   <img src="./topology.png" alt="Topology Diagram" width="800">
+  
  *(The topology consists of two Cisco ISR4331 routers, R1 and R2, connected directly to each other via their GigabitEthernet0/0/0 interfaces. Both routers require basic IP configuration to establish Layer 3 connectivity.)*
+ 
 </div>
 
 ## Requirements
