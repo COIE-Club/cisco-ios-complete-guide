@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>01 - Ethernet Interfaces</h1>
+<h1>Cisco IOS Ethernet Interfaces</h1>
 
 Learn how to configure and verify Ethernet interfaces on Cisco IOS routers.
 
@@ -339,5 +339,5 @@ If the ping fails:
 
 # References
 
-- [Issue #16](https://github.com/COIE-Club/cisco-ios-comprehensive-guide/issues/16)
-- [Cisco IOS Comprehensive Guide Repository](https://github.com/COIE-Club/cisco-ios-comprehensive-guide)
+Cisco Command Reference: [IP Commands](https://www.cisco.com/c/en/us/td/docs/server_nw_virtual/2-5_release/command_reference/ip.html)
+Cisco Command Reference: [Chapter: Ethernet Interface Commands](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/b-interfaces-hardware-component-cr-8000/ethernet-interface-commands.html)
