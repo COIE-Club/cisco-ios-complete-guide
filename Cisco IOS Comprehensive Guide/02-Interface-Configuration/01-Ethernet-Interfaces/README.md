@@ -65,7 +65,7 @@ In production environments, verifying interface status is usually the first trou
 # Requirements
 
 - Cisco IOS Router (ISR4331 or equivalent)
-- Cisco CML, EVE-NG, GNS3, or Packet Tracer (where supported)
+- Cisco Packet Tracer
 - Basic knowledge of Cisco IOS CLI
 - Ethernet connection between the two routers
 
