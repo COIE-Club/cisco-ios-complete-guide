@@ -340,4 +340,5 @@ If the ping fails:
 # References
 
 Cisco Command Reference: [IP Commands](https://www.cisco.com/c/en/us/td/docs/server_nw_virtual/2-5_release/command_reference/ip.html)
+
 Cisco Command Reference: [Chapter: Ethernet Interface Commands](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/b-interfaces-hardware-component-cr-8000/ethernet-interface-commands.html)
