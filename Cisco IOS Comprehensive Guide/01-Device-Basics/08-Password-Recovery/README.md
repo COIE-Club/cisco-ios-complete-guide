@@ -24,6 +24,7 @@ In a real-world enterprise environment, network engineers frequently inherit und
 * One Cisco ISR Router (e.g., R1 as an ISR 4331).
 * One Cisco Catalyst Switch (e.g., SW1 as a 2960-24TT).
 * Console cable access to both devices (SSH/Telnet cannot be used for password recovery).
+* Application: Cisco Packet Tracer.
 
 **Packet Tracer Lab Note for Accessing ROMMON:**
 Sometimes Cisco Packet Tracer does not save the ROMMON state correctly as the default when starting a lab. If your switch boots normally, you will need to manually interrupt the boot process:
