@@ -1,4 +1,8 @@
-# 08 Password Recovery
+<div align = "center">
+
+# Cisco IOS Password Recovery
+
+</div>
 
 ## Overview
 Password recovery is the emergency procedure used to regain administrative access to a Cisco IOS device when the privileged EXEC (`enable`) password or local console credentials are lost. By interrupting the standard boot process and interacting directly with the ROM Monitor (ROMMON) or the switch bootloader prompt, administrators can temporarily bypass the saved configuration, load it manually into active memory, and overwrite the unknown passwords without destroying the existing network settings.
@@ -7,18 +11,14 @@ Password recovery is the emergency procedure used to regain administrative acces
 In a real-world enterprise environment, network engineers frequently inherit undocumented legacy hardware, or an administrator might leave the organization without securely handing over credentials. Instead of performing a hard factory reset on a core router—which would cause a massive network outage by wiping all complex routing protocols, interfaces, and VPN configurations—password recovery allows you to surgically replace only the forgotten credentials while leaving the rest of the critical production configuration completely intact.
 
 ## Topology
+
+<div align = "center">
+
 ![Topology Diagram](./topology.png)
 
-*(Topology layout based on reference: image_8eb80f.png)*
-
-```text
-      192.168.0.1/24 (DHCP Server)              192.168.0.100-254 (DHCP)
-      +--------+                                +--------+
-      |   R1   | Gi0/0/0      Fa0/1 +---+ Fa0/2 |  PC0   |
-      |ISR 4331+--------------------+SW1+-------+        |
-      +--------+                    +---+       +--------+
-```
 **Description:** R1 is a Cisco ISR 4331 router acting as a DHCP server with the IP address `192.168.0.1`. It connects out of interface `Gig0/0/0` into the Catalyst 2960 switch (SW1) on `FastEthernet 0/1`. PC0 is connected to SW1 on `FastEthernet 0/2` and relies on R1 to receive a dynamically assigned IP address from the `192.168.0.100-254` range. In this lab, both R1 and SW1 are currently locked out and must be booted into ROMMON mode.
+
+</div>
 
 ## Requirements
 * One Cisco ISR Router (e.g., R1 as an ISR 4331).
@@ -165,6 +165,3 @@ PC0> ping 192.168.0.1
 ## References
 * [Cisco: Password Recovery Procedures](https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/6130-index.html)
 * [Cisco: Recover Password for Catalyst Fixed Configuration Switches](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-2950-series-switches/12040-pswdrec-2900xl.html)
-
-[https://github.com/COIE-Club/cisco-ios-comprehensive-guide](https://github.com/COIE-Club/cisco-ios-comprehensive-guide)
-[https://github.com/COIE-Club/cisco-ios-comprehensive-guide/issues/6](https://github.com/COIE-Club/cisco-ios-comprehensive-guide/issues/6)
