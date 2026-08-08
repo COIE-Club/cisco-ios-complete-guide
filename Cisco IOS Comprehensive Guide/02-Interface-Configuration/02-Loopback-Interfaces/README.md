@@ -41,7 +41,6 @@ interface Loopback0
  exit
 end
 write memory
-
 ```
 
 ```text
@@ -54,7 +53,6 @@ interface Loopback0
  exit
 end
 write memory
-
 ```
 
 ## Configuration Explanation
@@ -71,14 +69,12 @@ write memory
 
 ```text
 R1# show ip interface brief
-
 ```
 
 Look at the output to confirm `Loopback0` is listed and that the Status and Protocol columns both show **up**.
 
 ```text
 R1# ping 1.1.1.1
-
 ```
 
 By pinging the interface from the router itself, you verify that the IP stack is correctly responding on this virtual interface.
