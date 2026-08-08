@@ -96,3 +96,5 @@ By pinging the interface from the router itself, you verify that the IP stack is
 * **Standardize your numbering scheme.** For example, enterprise organizations often mandate that `Loopback0` is exclusively for the device's management IP, `Loopback1` is used for BGP peering, and `Loopback100` and above are used for temporary testing.
 
 ## References
+
+* Cisco Command Reference: [Loopback Interfaces](https://www.cisco.com/c/en/us/td/docs/security/asa/asa919/configuration/general/asa-919-general-config/interface-loopback.pdf)
