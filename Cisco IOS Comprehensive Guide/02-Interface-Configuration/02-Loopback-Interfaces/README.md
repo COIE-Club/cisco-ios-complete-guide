@@ -28,6 +28,7 @@ Network engineers use loopback interfaces to provide a highly stable, always-on 
 * Two Cisco IOS routers (R1 and R2).
 * Basic IP connectivity between the devices across the physical link.
 * Access to the CLI via a terminal emulator or lab environment simulator.
+* Application: Cisco Packet Tracer.
 
 ## Configuration
 
